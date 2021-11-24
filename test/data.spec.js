@@ -408,7 +408,7 @@ describe('huevitoPokemon', () => {
   it('is a function', () => {
     expect(typeof huevitoPokemon).toBe('function');
   });
-  it('should return', () => {
+  it('should return 23', () => {
     expect(huevitoPokemon("2 km", data.pokemon)).toHaveLength(23)
   });
 });
@@ -417,10 +417,10 @@ describe('filtarCp', () => {
   it('is a function', () => {
     expect(typeof filtarCp).toBe('function');
   });
-  it('should return', () => {
+  it('should return [mewtwo, eevee, pikachu, wooper] ', () => {
     expect(filtarCp("max", arrayPrueba)).toStrictEqual([mewtwo, eevee, pikachu, wooper])
   });
-  it('should return', () => {
+  it('should return [wooper, pikachu, eevee, mewtwo]', () => {
     expect(filtarCp("min", arrayPrueba)).toStrictEqual([wooper, pikachu, eevee, mewtwo])
 });
 });
@@ -432,20 +432,20 @@ describe('ordenAlfaNumerico', () => {
   });
 
 
-it('should return', () => {
+it('should return [ eevee, mewtwo, pikachu, wooper]', () => {
   expect(ordenAlfaNumerico("az", arrayPrueba)).toStrictEqual([ eevee, mewtwo, pikachu, wooper])
 });
 
 
-it('should return', () => {
+it('should return [wooper, pikachu, mewtwo, eevee]', () => {
   expect(ordenAlfaNumerico("za", arrayPrueba)).toStrictEqual([wooper, pikachu, mewtwo, eevee])
 });
 
-it('should return', () => {
+it('should return [wooper, mewtwo, eevee, pikachu]', () => {
   expect(ordenAlfaNumerico("251_1",arrayPrueba)).toStrictEqual([wooper, mewtwo, eevee, pikachu])
 });
 
-it('should return', () => {
+it('should return [pikachu, eevee, mewtwo, wooper]', () => {
   expect(ordenAlfaNumerico("1_251", arrayPrueba)).toStrictEqual([pikachu, eevee, mewtwo, wooper])
 });
 
@@ -455,7 +455,7 @@ describe('typePokemones', () => {
   it('is a function', () => {
     expect(typeof typePokemones).toBe('function');
   });
-  it('returns `24`', () => {
+  it('should return `24`', () => {
     expect(typePokemones("grass",data.pokemon)).toHaveLength(24);
   });
 });
@@ -465,7 +465,7 @@ describe('rarezaPokemon', () => {
   it('is a function', () => {
     expect(typeof rarezaPokemon).toBe('function');
   });
-  it('should return', () => {
+  it('should return 240', () => {
     expect(rarezaPokemon("normal", data.pokemon)).toHaveLength(240)
   });
 });
@@ -475,7 +475,7 @@ describe('regionFuncion', () => {
     expect(typeof regionFuncion).toBe('function');
   });
 
-    it('returns `100`', () => {
+    it('should returns `100`', () => {
       expect(regionFuncion("johto",data.pokemon)).toHaveLength(100);
     });
   });
@@ -485,11 +485,11 @@ describe('buscarPoke', () => {
     expect(typeof buscarPoke).toBe('function');
   });
 
-  it('returns `pikachu`', () => {
+  it('should returns `pikachu`', () => {
     expect(buscarPoke("pika",arrayPrueba)).toStrictEqual([pikachu]);
   });
 
-  it('returns `bulbasaur`', () => {
+  it('should returns `wooper`', () => {
     expect(buscarPoke("194",data.pokemon)).toStrictEqual([wooper]);
   });
 });
@@ -499,7 +499,7 @@ describe('regionSelect', () => {
     expect(typeof regionSelect).toBe('function');
   });
 
-    it('returns `150`', () => {
+    it('should returns `151`', () => {
       expect(regionSelect("kanto",data.pokemon)).toHaveLength(151);
     });
   });
@@ -508,7 +508,7 @@ describe('regionSelect', () => {
     it('is a function', () => {
       expect(typeof rarezaSelect).toBe('function');
     });
-    it('should return', () => {
+    it('should return 3', () => {
       expect(rarezaSelect("normal", arrayPrueba)).toHaveLength(3)
     });
   });
@@ -517,7 +517,7 @@ describe('regionSelect', () => {
     it('is a function', () => {
       expect(typeof tiposSelect).toBe('function');
     });
-    it('should return', () => {
+    it('should return eevee', () => {
       expect(tiposSelect("normal", arrayPrueba)).toStrictEqual([eevee]);
     });
   });
